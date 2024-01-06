@@ -27,4 +27,20 @@ export default class AppClass extends Component{
   }
 
   // code here
+
+  render(){
+    const images = this.imageData();
+
+    return(
+      <div>
+      <h1>Kalvium Gallary</h1>
+      <div id='images'>
+        {images.map((image) => (
+          <img key={image.id} src={image.img} alt="" />
+      ))}
+      </div>
+    </div>
+
+    )
+  }
 }
